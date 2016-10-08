@@ -1,0 +1,477 @@
+@import 'normalize/normalize.css';
+@import 'bourbon/bourbon';
+
+@font-face { font-family: fontello;
+             src: url(../fonts/fontello.woff?df345586) format('woff'),
+                  url(../fonts/fontello.ttf?df345586) format('truetype'); }
+@font-face { font-family: Quattro;
+             src: url(../fonts/Quattrocento-Regular.woff?df345586) format('woff'),
+                  url(../fonts/Quattrocento-Regular.ttf?df345586) format('truetype'); }
+@font-face { font-family: Quattro;
+             font-weight: bold;
+             src: url(../fonts/Quattrocento-Bold.woff?df345586) format('woff'),
+                  url(../fonts/Quattrocento-Bold.ttf?df345586) format('truetype'); }
+
+$light-color: #F8F8F2;
+$dark-color: #272822;
+$link-color: #36A;
+$content-width: 768px;
+$content-sw-width: $content-width - 250px;
+
+html {
+    background-color: #666;
+    background-image: url('../images/pattern_fine.png');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-size: 0.94em;
+    font-family: Quattro;
+    line-height: 1.3;
+    @media only screen and (max-width: $content-width) {
+        font-size: 1em;
+    }
+}
+body {
+    margin: 0px;
+}
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+table {
+    width: 100%;
+    font-size: 1em;
+    border-collapse: collapse;
+}
+tr {
+    border-bottom: 1px solid #AAA;
+}
+td, th {
+    padding: 0.5em 1em;
+    text-align: left;
+}
+hr {
+    background-color: #AAA;
+    border: 0px;
+    height: 1px;
+}
+blockquote {
+    border-left: 1px solid #AAA;
+    font-style: italic;
+    margin: 0px;
+    padding-left: 0.75em;
+}
+.head {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background-color: $dark-color;
+    border-bottom: 1px solid #AAA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.18);
+    padding-left: 1.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    @media only screen and (max-width: $content-width) {
+        border-radius: 0px;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+        text-align: center;
+    }
+}
+.heading {
+    float: right;
+    width: 580px;
+    line-height: 1.1;
+    @media only screen and (max-width: $content-width) {
+        float: none;
+        width: 100%;
+    }
+}
+.heading-t {
+    font-size: 2.5em;
+    color: $light-color;
+    display: block;
+    margin-bottom: 0.1em;
+    @media only screen and (max-width: $content-width) {
+        font-size: 1.5em;
+    }
+}
+.subheading-t {
+    font-size: 1em;
+    color: $light-color;
+}
+.icon-t {
+    float: left;
+    width: 62px;
+    height: 62px;
+    @media only screen and (max-width: $content-width) {
+        float: none;
+        width: 100px;
+        height: 100px;
+        margin-top: 0.6em;
+    }
+}
+.page {
+    width: $content-width;
+    border-radius: 3px;
+    margin: 50px auto 0px;
+    box-shadow: -4px  0px 4px rgba(0, 0, 0, 0.18), 4px  0px 4px rgba(0, 0, 0, 0.18), 0px  4px 4px rgba(0, 0, 0, 0.18), 0px -4px 4px rgba(0, 0, 0, 0.18);
+    background: url('../images/grains.png') repeat 0% 0% #EEE;
+    color: $dark-color;
+    @media only screen and (max-width: $content-width) {
+        width: 100%;
+        border-radius: 0px;
+        margin: 0px;
+        box-shadow: 0px  4px 4px rgba(0, 0, 0, 0.18);
+    }
+}
+.content-block {
+    margin-left: 1.8em;
+    margin-right: 1.8em;
+    margin-top: 1.6em;
+    @media only screen and (max-width: $content-width) {
+        margin-left: 1em;
+        margin-right: 1em;
+    } 
+}
+.article {
+    margin-bottom: 1.6em;
+    padding-bottom: 0px;
+    border: 0px solid #AAA;
+    border-bottom-width: 1px;
+    .header {
+        border: 0px solid #DDD;
+        border-bottom-width: 1px;
+    }
+    .lug {
+        float: left;
+        height: 2em;
+        width: 1.5em;
+        margin-left: -1.8em;
+        background-color: $dark-color;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+        @media only screen and (max-width: $content-width) {
+            visibility: hidden;
+        }
+    }
+    .icon:before {
+        float: right;
+        height: 1.2em;
+        width: 1.2em;
+        border-radius: 100%;
+        font-size: 1em;
+        font-family: fontello;
+        text-align: center;
+        padding: 0.6em;
+        color: $dark-color;
+        content: "\e804";
+    }
+    .title {
+        font-style: italic;
+    }
+    .date {
+        font-style: italic;
+    }
+    .content {
+        text-align: justify;
+    }
+    .post-info {
+        margin-top: 0.7em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        margin-bottom: 0px;
+        border: 0px solid #DDD;
+        border-top-width: 1px;
+    }
+    img {
+        width: 100%;
+    }
+    .tags {
+        float: right;
+        font-style: italic;
+        @media only screen and (max-width: $content-sw-width) {
+            float: none;
+            text-align: center;
+        }
+    }
+    .author {
+        float: left;
+        font-style: italic;
+        @media only screen and (max-width: $content-sw-width) {
+            float: none;
+            text-align: center;
+        }
+    }
+}
+
+.footnote {
+    ol {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 1em;
+        p {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+    }
+    li {
+        margin-top: 0px;
+        margin-bottom: 0px;       
+    }
+}
+
+pre {
+    overflow: auto;
+    font-size: 0.9em;
+}
+.pag {
+    text-align: center;
+    font-weight: bold;
+    width: 85px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    background-color: $link-color;
+    color: $light-color;
+    margin-bottom: 1em;
+    @include transition(all 0.5s);
+    &:hover {
+        background-color: $dark-color;
+    }   
+}
+.pag-prev {
+    @extend .pag;
+    float: left;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.pag-next {
+    @extend .pag;
+    float: right;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.pag-space {
+    width: 85px;
+}
+.pag-space-l {
+    @extend .pag-space;
+    float: left;
+}
+.pag-space-r {
+    @extend .pag-space;
+    float: right;
+}
+.pag-cur {
+    width: $content-width - 2*85px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+footer {
+    min-height: 40px;
+    color: $light-color;
+    background-color: $dark-color;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 0.5em 0.5em 0em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.18) inset;
+    .l {
+        float: left;
+        text-align: left;
+        @media only screen and (max-width: $content-width) {
+            float: none;
+            text-align: center;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+    }
+    .r {
+        float: right;
+        text-align: right;
+        @media only screen and (max-width: $content-width) {
+            float: none;
+            text-align: center;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+    }
+    @media only screen and (max-width: $content-width) {
+        border-radius: 0px;
+    }
+}
+.icon-btn {
+    font-family: fontello;
+    text-align: center;
+    font-size: 1.8em;
+    margin-right: 7px;
+    &:before {
+        color: $light-color;
+        @include transition(all 0.5s);
+    }
+    &:hover:before {
+        color: $link-color;
+        @include transition(all 0.5s);
+    }
+}
+.icon-github {
+    @extend .icon-btn;
+    &:before {
+        content: "\e805";
+    }
+}
+.icon-bitbucket {
+    @extend .icon-btn;
+    &:before {
+        content: "\e806";
+    }
+}
+.icon-gplus {
+    @extend .icon-btn;
+    &:before {
+        content: "\e803";
+    }
+}
+.icon-twitter {
+    @extend .icon-btn;
+    &:before {
+        content: "\e807";
+    }
+}
+.icon-email {
+    @extend .icon-btn;
+    &:before {
+        content: "\e80D";
+    }
+}
+.icon-flattr {
+    @extend .icon-btn;
+    &:before {
+        content: "\e801";
+    }
+}
+.icon-amazon {
+    @extend .icon-btn;
+    &:before {
+        content: "\e802";
+    }
+}
+.icon-bitcoin {
+    @extend .icon-btn;
+    &:before {
+        content: "\e810";
+    }
+}
+.icon-tags {
+    font-family: fontello;
+    color: $dark-color;
+    &:before  {
+        content: "\e800";
+    }
+}
+.icon-tag {
+    font-family: fontello;
+    color: $dark-color;
+    &:before  {
+        content: "\e80a";
+    }    
+}
+.icon-author {
+    font-family: fontello;
+    color: $dark-color;
+    &:before  {
+        content: "\e80b";
+    }    
+}
+.icon-archives {
+    font-family: fontello;
+    color: $dark-color;
+    &:before  {
+        content: "\e812";
+    }    
+}
+.ul-lists {
+    width: 100%;
+    margin-bottom: 1.6em;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.ul-lists li {
+    float: left;
+    display: inline;
+    width: 25%;
+    @media only screen and (max-width: $content-width) {
+        width: 33.333%;
+    }
+    @media only screen and (max-width: $content-width - 200px) {
+        width: 50%;
+    }
+    @media only screen and (max-width: $content-width - 350px) {
+        width: 100%;
+    }
+}
+.bottom-line {
+    font-size: 1em;
+    width: $content-width;
+    margin: 0px auto 1.6em;
+    color: $light-color;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+    /* IE 9 fix */
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#333333, direction=130, Strength=3);
+    @media only screen and (max-width: $content-width) {
+        width: 100%;
+    }
+    h2 {
+        margin-bottom: 0.25em;
+    }
+    a {
+        color: $light-color;
+        display: block;
+    }
+    a:hover {
+        color: $link-color;
+        @include transition(all 0.5s);
+    }
+}
+.bottom-line-l {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.bottom-line-r {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.codehilite  {
+    font-size: 1em;
+    background: #272822;
+    color: #f8f8f2;
+    margin-left: -1.8em;
+    margin-right: -1.8em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    @media only screen and (max-width: $content-width) {
+        margin-left: -1em;
+        margin-right: -1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    } 
+}
+
+.clear {
+    @include clearfix;
+}
+
+.ie9 img[src*=".svg"] {
+  width: 100%; 
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%; 
+  }
+}

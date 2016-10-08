@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+
+{% block title %}{{ SITENAME }} - Articles with {{ tag }} tag{% endblock %}
+{% block content %}
+    <h2><a class="icon-tag"></a> Tag: {{ tag }}</h2>
+    {{ super() }}
+{% endblock %}

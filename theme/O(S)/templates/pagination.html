@@ -1,0 +1,17 @@
+{% if DEFAULT_PAGINATION %}
+    {% if articles_paginator.num_pages > 1 %}
+    <div class="paginator">
+        {% if articles_page.has_previous() %}
+            <a class="pag-prev" href="{{ SITEURL }}/{{ articles_previous_page.url }}"><-newer</a>
+        {% else %}
+            <div class="pag-space-l"></div>
+        {% endif %}
+        {% if articles_page.has_next() %}
+            <a class="pag-next" href="{{ SITEURL }}/{{ articles_next_page.url }}">older-></a>
+        {% else %}
+            <div class="pag-space-r"></div>
+        {% endif %}
+            <div class="pag-cur">{{ articles_page.number }} / {{ articles_paginator.num_pages }}</div>
+    </div>
+    {% endif %}
+{% endif %}

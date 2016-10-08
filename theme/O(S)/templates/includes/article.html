@@ -1,0 +1,40 @@
+<div class="article">
+    <div class="header">
+        <div class="lug"></div>
+        <div class="icon"></div>
+        <div class="date">
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.locale_date }}</a>
+        </div>
+        <div class="title">
+            {{ article.title }}
+        </div>
+    </div>
+    <div class="content">
+        {{ article.content }}
+    </div>
+    <div class="post-info">
+        <div class="author">
+            Author:
+            {% for author in article.authors %}
+            <a href="{{ SITEURL }}/{{ author.url }}">
+            {% if loop.last %}
+                {{ author }}</a>
+            {% else %}
+                {{ author }}</a>,
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div class="tags">
+        Tags: 
+        {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">
+            {% if loop.last %}
+                {{ tag }}</a>
+            {% else %}
+                {{ tag }}</a>,
+            {% endif %}
+        {% endfor %}
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
