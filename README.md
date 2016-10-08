@@ -49,7 +49,7 @@ Make sure gem bin directory is in your $PATH
 * MathJax
     * Download complete MathJax package *https://github.com/mathjax/MathJax/archive/master.zip*
     * Copy extracted files under *theme/O\(S\)/static/js/MathJax*
-    * Copy *Gruntfile.js* and *package.json* from misc to *theme/O\(S\)/static/js/MathJax*
+    * Copy *Gruntfile.js* and *package.json* from *misc* to *theme/O\(S\)/static/js/MathJax*
     * Install grunt and dependencies
 
     >$ sudo npm install -g grunt-cli
