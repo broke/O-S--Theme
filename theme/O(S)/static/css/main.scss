@@ -143,12 +143,13 @@ blockquote {
     }
     .lug {
         float: left;
-        height: 2em;
+        height: 2.2em;
         width: 1.5em;
+        margin-top: 0.2em;
         margin-left: -1.8em;
         background-color: $dark-color;
-        border-top-right-radius: 100%;
-        border-bottom-right-radius: 100%;
+        border-top-right-radius: 1.1em;
+        border-bottom-right-radius: 1.1em;
         @media only screen and (max-width: $content-width) {
             visibility: hidden;
         }
