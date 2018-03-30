@@ -16,9 +16,9 @@ Run the command above in project root
 
 >$ sudo pip install markdown
 
-* webassets (version 0.12.0 doesn't work with Sass 3.4.22, using version 0.11.1 instead)
+* webassets
 
->$ sudo pip install 'webassets==0.11.1'
+>$ sudo pip install webassets
 
 * cssmin
 
