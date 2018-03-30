@@ -12,7 +12,14 @@ SITEURL = 'YOUR_URL'
 THEME = 'theme/O(S)'
 DEFAULT_PAGINATION = 10
 MATHJAX_SUPPORT = True
-MD_EXTENSIONS = ['codehilite(css_class=codehilite)','extra']
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
 PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = ['assets',]
 
