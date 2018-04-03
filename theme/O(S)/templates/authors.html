@@ -5,8 +5,8 @@
 {% for idx in "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"|list %}
 <h4>{{ idx }}</h4>
 <ul class="ul-lists">
-    {%- for author, articles in authors|sort %}
-    {% if idx == author|upper|truncate(1, True, end='') %}
+    {% for author, articles in authors|sort %}
+    {% if idx == author|upper|truncate(1, True, '', 0) %}
     <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
     {% endif %}
     {% endfor %}
